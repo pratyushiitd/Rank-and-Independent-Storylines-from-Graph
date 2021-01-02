@@ -2,7 +2,7 @@ import java.io.*;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-public class assignment4{
+public class Graph{
     
     public static class Vertex{
         public int id;
@@ -174,7 +174,7 @@ public class assignment4{
                 current = current.next;
                 continue;
             }
-            assignment4.dfs(id, visited, ind, adjList, temp);
+            Graph.dfs(id, visited, ind, adjList, temp);
             current = current.next;
         }
     }
@@ -260,7 +260,7 @@ public class assignment4{
         }
         
         if(args[2].equals("rank")){
-            assignment4.mergesort(sortVer, 0, nodecount-1);
+            Graph.mergesort(sortVer, 0, nodecount-1);
             // long toc= System.nanoTime();
             // System.out.println((toc- startTime)/1000000000.0);
             System.out.print(sortVer[0].val);
@@ -279,13 +279,13 @@ public class assignment4{
             for(int it1 = 0; it1<nodecount; it1++){
                 if (visited[it1] == false){
                     ArrayList<Vertex> temp = new ArrayList<Vertex>();
-                    assignment4.dfs(it1, visited, ind, adjList, temp);
+                    Graph.dfs(it1, visited, ind, adjList, temp);
                     ind++;
-                    assignment4.mergesort2(temp, 0, temp.size()-1);
+                    Graph.mergesort2(temp, 0, temp.size()-1);
                     comps.add(temp);
                 }
             }
-            assignment4.mergesort3(comps, 0, comps.size()-1);
+            Graph.mergesort3(comps, 0, comps.size()-1);
             //  long toc= System.nanoTime();
             //  System.out.println((toc- startTime)/1000000000.0);
             for(int a1 = 0; a1 < ind; a1++){
