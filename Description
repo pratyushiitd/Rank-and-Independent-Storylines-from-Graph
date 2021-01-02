@@ -1,0 +1,28 @@
+Command line arguement after compiling the file Graph.java
+$java Graph nodes.csv edges.csv function
+
+nodes.csv contains all the nodes of your graph
+edges.csv contains all the edges present in the graph
+function can be : average , rank or independent_storylines_dfs
+
+(a) Function: average. Should print the average number of neighbours each node is
+associated with, as a float upto two decimal places.
+Sample random output:
+$java assignment4 nodes.csv edges.csv average
+
+(b) Function: rank. Should print a sorted list of all nodes, with comma as delimiter. 
+Nodes with more co-occurrences appear before. If there is a tie between
+nodes based on co-occurrence count, then the order should be descending based on
+lexicographic order of the node strings.
+
+$java assignment4 nodes.csv edges.csv rank
+
+(c) Function: independent_storylines_dfs.To extract independent storylines,
+that have no edge across them, using DFS. Nodes are printed in each independent storyline, as a
+separate line in the output.
+The largest storyline (with maximum characters) will appear at the top, followed by the second
+largest and so on. Within each line, the character names are delimited with comma, and
+lexicographically sorted in descending order. If two storylines have same number of characters,
+ties is broken in lexicographically descending order of character names. 
+
+$java assignment4 nodes.csv edges.csv independent_storylines_dfs
